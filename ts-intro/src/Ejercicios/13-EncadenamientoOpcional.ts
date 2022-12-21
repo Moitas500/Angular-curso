@@ -13,7 +13,7 @@ const pasajero2: Pasajero = {
 }
 
 function imprimeHijos(pasajeros:Pasajero): void{
-    const cuantosHijos = pasajeros.hijos.length;
+    const cuantosHijos = pasajeros.hijos?.length || 0;
 
     console.log(cuantosHijos);
 }
