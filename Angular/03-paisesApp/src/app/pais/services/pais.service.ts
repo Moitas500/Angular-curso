@@ -9,6 +9,8 @@ import { Country } from '../interfaces/pais.interface';
 export class PaisService {
 
   private apiUrl: string = "https://restcountries.com/v3.1";
+  regionActiva: string = '';
+  paises: Country[] = [];
 
   constructor( private http: HttpClient ) { }
 
@@ -25,6 +27,11 @@ export class PaisService {
   getPaisPorCodigo( id:string ): Observable<Country>{
     const url = `${ this.apiUrl }/alpha/${ id }`;
     return this.http.get<Country>( url );
+  }
+
+  buscarRegion( region: string ): Observable<Country[]>{
+    const url = `${ this.apiUrl }/region/${ region }`;
+    return this.http.get<Country[]>( url );
   }
 
 }
