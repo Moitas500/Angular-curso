@@ -1,0 +1,24 @@
+<div class="text-layout">
+    <h1>Decimal pipe y porcentaje</h1>
+    
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header = "Ventas netas">
+            {{ ventasNetas | number:'1.2-2' }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header = "Ventas brutas">
+            {{ ventasNetas + 200000 | currency }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header = "Ganancia">
+            {{ porcentaje | percent:'2.2-2' }}
+        </p-card>
+    </div>
+</div>

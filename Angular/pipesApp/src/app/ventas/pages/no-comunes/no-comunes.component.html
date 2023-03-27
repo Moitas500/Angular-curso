@@ -1,0 +1,20 @@
+<div class="text-layout">
+    <h1>Pipes no comunes</h1>
+</div>
+
+<div class="p-grid">
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="i18n Select Pipe" [toggleable]="true">
+            Saludos {{ nombre }}, es un placer 
+            {{ genero | i18nSelect: invitacionMapa }}
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="i18n Plural pipe" [toggleable]="true">
+            Content 
+        </p-fieldset>
+    </div>
+
+</div>
