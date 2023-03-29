@@ -6,14 +6,40 @@
 
     <div class="p-col p-md-6">
         <p-fieldset legend="i18n Select Pipe" [toggleable]="true">
-            Saludos {{ nombre }}, es un placer 
-            {{ genero | i18nSelect: invitacionMapa }}
+            <p>
+                Saludos {{ nombre }}, es un placer 
+                {{ genero | i18nSelect: invitacionMapa }}
+            </p>
+            <button pButton (click) = "cambiarCliente()" label = "Cambiar persona" class = "p-button-help"></button>
         </p-fieldset>
     </div>
 
     <div class="p-col p-md-6">
         <p-fieldset legend="i18n Plural pipe" [toggleable]="true">
-            Content 
+            <p>
+                Content 
+            </p>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Slice pipe" [toggleable]="true">
+
+            <b>Original</b>
+            <pre></pre>
+
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="KeyValuePipe" [toggleable]="true">
+
+            <ul>
+                <li *ngFor="let item of persona | keyvalue">
+                    {{ item.key }}: {{ item.value }}
+                </li>
+            </ul>
+
         </p-fieldset>
     </div>
 

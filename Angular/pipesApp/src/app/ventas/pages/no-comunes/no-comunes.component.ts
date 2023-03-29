@@ -15,4 +15,18 @@ export class NoComunesComponent {
     'femenino': 'invitarla'
   }
 
+  cambiarCliente(){
+    this.nombre = 'Melissa';
+    this.genero = 'Femenino';
+  }
+
+  borrarCliente(){
+
+  }
+
+  persona = {
+    nombre: 'Cristhian',
+    edad: 23
+  }
+
 }
